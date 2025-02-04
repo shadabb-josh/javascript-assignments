@@ -1,0 +1,25 @@
+<html>
+  <head> </head>
+  <body>
+    <h1 id="test">Hello World!</h1>
+
+    <h2>
+      in the head tag ? If script tag is placed in the head tag, script will
+      load before the DOM, then targeting element with #test will be null.
+    </h2>
+
+    <h2>
+      at the start of the body tag ? If script tag is placed before body tag,
+      script will load before the DOM, then targeting element with #test will be
+      null. if you placed it here, Browser will automatically move it inside
+      head.
+    </h2>
+
+    <h2>
+        at the end of the body tag ?
+        This will change the content inside the target element, beacause DOM is
+        renderd and it is not null so it will work.
+    </h2>
+    <script src="question2.js"></script>
+  </body>
+</html>
