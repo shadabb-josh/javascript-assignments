@@ -31,5 +31,3 @@ const updatedObject = {
 }
 
 console.log(updatedObject)
-
-

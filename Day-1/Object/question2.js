@@ -24,7 +24,7 @@ let obj = {
 // method that filter out values which are primitive
 function filterObj(object) {
   return Object.entries(object).filter(
-    ([key, value]) => !Array.isArray(value) && typeof value !== "object"
+    ([key, value]) => typeof value !== "object"
   );
 }
 

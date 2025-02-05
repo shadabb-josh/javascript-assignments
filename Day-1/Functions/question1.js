@@ -14,3 +14,4 @@ function someFunction() {
 }
 
 console.log(someFunction()); // Output: "1 2 Found 3, exiting function"
+

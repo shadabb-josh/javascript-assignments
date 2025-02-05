@@ -123,7 +123,7 @@ console.log(userDetails); // sorted array by birthdate
 // 4
 function getById(id) {
   const user = userDetails.find((obj) => obj.id === id);
-  if (user.length === 1) {
+  if (user) {
     return user;
   }
   return "User doesn't Exists";

@@ -57,3 +57,4 @@ arr2 = [10, 20, 30]; // TypeError: Assignment to constant variable
 // Reassigning the object
 obj2 = { name: "New" }; // TypeError: Assignment to constant variable
 
+

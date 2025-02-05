@@ -22,3 +22,4 @@ function fillArray(size) {
 }
 
 console.log(fillArray(25));
+
