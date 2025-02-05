@@ -72,25 +72,32 @@ const userDetails = [
 ];
 
 // 1
-function filterByName(name){
-    const filteredObj = userDetails.filter((obj)=> obj.first_name === name);
-    return filteredObj;
+function filterByName(name) {
+  const filteredObj = userDetails.filter((obj) =>
+    obj.first_name.toLowerCase().includes(name.toLowerCase())
+  );
+  return filteredObj;
 }
 
-console.log(filterByName("Townie"));
+console.log(filterByName("k"));
 // Output : [
 //   {
-//     id: 10,
-//     first_name: 'Townie',
-//     email: 'tpetyt9@upenn.edu',
-//     date_of_birth: '2018/09/01'
+//     id: 1,
+//     first_name: 'Nicki',
+//     email: 'ncrozier0@squarespace.com',
+//     date_of_birth: '2009/05/09'
+//   },
+//   {
+//     id: 7,
+//     first_name: 'Kathleen',
+//     email: 'kvasyukhnov6@devhub.com',
+//     date_of_birth: '2010/12/20'
 //   }
 // ]
 
-
-// 2 
-function getAllEmails(){
-   return emails = userDetails.map((obj) => obj.email);
+// 2
+function getAllEmails() {
+  return (emails = userDetails.map((obj) => obj.email));
 }
 console.log(getAllEmails());
 // OUTPUT :
@@ -107,19 +114,19 @@ console.log(getAllEmails());
 //     'tpetyt9@upenn.edu'
 // ]
 
-// 3 
-userDetails.sort((a,b)=>{
-    return new Date(b.date_of_birth) - new Date(a.date_of_birth);
-})
+// 3
+userDetails.sort((a, b) => {
+  return new Date(b.date_of_birth) - new Date(a.date_of_birth);
+});
 console.log(userDetails); // sorted array by birthdate
 
 // 4
-function getById(id){
-    const user = userDetails.filter((obj)=> obj.id === id);
-    if(user.length === 1){
-        return user
-    }
-    return "User doesn't Exists";
+function getById(id) {
+  const user = userDetails.filter((obj) => obj.id === id);
+  if (user.length === 1) {
+    return user;
+  }
+  return "User doesn't Exists";
 }
 
-console.log(getById(100)); 
+console.log(getById(100));
