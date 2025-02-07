@@ -3,14 +3,10 @@
 // the data has been received in the fetch.
 
 const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    fetch("https://reqres.in/api/users")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        resolve('Question Solved')
-      });
-  }, 2000);
+  fetch("https://reqres.in/api/users")
+    .then((response) => response.json())
+    .then((data) => setTimeout(() => resolve(data), 2000))
+    .catch(reject)
 });
 
-myPromise.then((message) => console.log(message));
+myPromise.then((data) => console.log(data))
