@@ -1,0 +1,31 @@
+<!-- Create a blog list page that fetches a list of users from a mock API and adds them to a
+table on the page after loading. Add a button to sort the users by name. Add an input to
+filter the table by search. (Optional: Show “Loading...” or a loading spinner on the scre
+till the data loads) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="search"
+      placeholder="Search by name..."
+      onkeyup="filterUsers()"
+    />
+    <button onclick="sortUsers()">Sort by Name</button>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+    <script src="question4.js"></script>
+  </body>
+</html>
